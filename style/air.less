@@ -1,0 +1,168 @@
+//基于PowerSwitch插件的轮播
+//重写样式，方便复用2016-09-01
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header,menu, nav, section {
+    display: block;
+}
+body {
+	font:12px "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi;
+}
+ol, ul{
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+input,button,select,textarea{outline:none}
+textarea{resize:none}
+.clear{
+  clear: both;
+}
+img{
+  vertical-align: bottom;
+}
+img:hover{
+  opacity: 0.7;
+}
+a{
+  color: #3A3839;
+  text-decoration: none;
+}
+a:hover{
+  color:@nxred;
+  text-decoration: none;
+}
+.red{
+	border:1px solid red;
+}
+@nxred:#F65E5F;
+@pageWidth:1210px;
+.line1{
+  width: @pageWidth;
+  height:1px;
+  border-top:1px solid #E1E1E1;
+}
+/*全新的轮播样式a2*/
+@swfWidth:1210px;
+@swfHeight:450px;
+.rollBox{
+  width:@swfWidth;
+  height:@swfHeight;
+  margin:0 auto;
+  position: relative;
+  overflow: hidden;
+  .red;
+  //控制点前后播放暂停
+  .tabAutoPlay{
+    width:100%;
+    height:100%;
+    top:115px;
+    position:absolute;
+    a{
+      position: absolute;
+      width:40px;
+      height:100px;
+      opacity: 0;
+      display: block;
+      z-index: 9999;
+      -webkit-transition: all .3s ease-out;
+      transition: all .3s ease-out;
+      background: url("../images/index.png") no-repeat;
+    }
+    a.pause{
+      display: none; //隐藏暂停控制点
+    }
+    a.prev{
+      left:5px;
+    }
+    a.next{
+      right:5px;
+      background-position: -50px 0;
+    }
+  }
+  //点点点的样式
+  .tabBtn{
+    bottom:35px;
+    left:50%;
+    position: absolute;
+    z-index: 99;
+    li{
+      float:left;
+      margin:0 10px 0 0;
+      text-indent: -9999px;
+      a.tab_a{
+        width:10px;
+        height:10px;
+        display: block;
+        border:1px solid #EEE;
+        border-radius: 50%;
+        background:#FFF;
+      }
+      a.tab_on{
+        border:1px solid #21a5c1;
+        border-radius: 50%;
+        background:#1FD0F6;
+      }
+
+    }
+  }
+  //切换内容的样式
+  .tab_content{
+    width:1760px;
+    li{
+      width:100%;
+      height:100%;
+      top:0;
+      position: absolute;
+      .rollPic{
+        img{
+          width:100%;
+          height:100%;
+        }
+      }
+      .rollName{
+        width:100%;
+        text-align: center;
+        position: absolute;
+        bottom:0;
+        font-size: 14px;
+        padding:5px 0;
+        background:rgba(0,0,0,0.6);
+        a{
+          color:#FFF;
+        }
+        a:hover{
+          color: @nxred;
+        }
+      }
+    }
+  }
+}
