@@ -79,17 +79,16 @@ a:hover{
   margin:0 auto;
   position: relative;
   overflow: hidden;
-  .red;
   //控制点前后播放暂停
   .tabAutoPlay{
     width:100%;
     height:100%;
-    top:115px;
     position:absolute;
     a{
       position: absolute;
       width:40px;
       height:100px;
+      top:50%;
       opacity: 0;
       display: block;
       z-index: 9999;
@@ -110,7 +109,7 @@ a:hover{
   }
   //点点点的样式
   .tabBtn{
-    bottom:35px;
+    bottom:15px;
     left:50%;
     position: absolute;
     z-index: 99;
@@ -148,6 +147,7 @@ a:hover{
           height:100%;
         }
       }
+      //图片文字说明
       .rollName{
         width:100%;
         text-align: center;
@@ -156,6 +156,7 @@ a:hover{
         font-size: 14px;
         padding:5px 0;
         background:rgba(0,0,0,0.6);
+        display:none;
         a{
           color:#FFF;
         }

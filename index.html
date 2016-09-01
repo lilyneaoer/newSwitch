@@ -51,10 +51,10 @@
             hoverStop: false,
             container: $("#tab_Auto_Play")
         });
-        //设置点点点水平居中
-        var tabBtnWidth=$("#tabAutoTrigger_a2").width();
-        tabBtnWidth=-tabBtnWidth/2;
-        $("#tabAutoTrigger1").css("margin-left",tabBtnWidth);
+        //设置点点点及按钮水平居中
+        $("#tab_Auto_Play a").css("margin-top",-$("#tab_Auto_Play a").height()/2);
+        $("#tab_Auto_Btn").css("margin-left",-$("#tab_Auto_Btn").width()/2);
+        //控制按钮渐入渐出
         $("#roll_Box").hover(
                 function () {
                     $("#tab_Auto_Play a").css("opacity","0.6");
