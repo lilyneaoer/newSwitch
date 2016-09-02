@@ -27,16 +27,16 @@
     </ul>
     <ul class="tab_content">
         <li id="tabAutoPlay1" >
-            <p class="rollPic"><a href="#" ><img title="中心一角" src="images/img1.jpg"></a> </p>
-            <p class="rollName"><a href="#" >中心一角1</a> </p>
+            <p class="rollPic"><a href="#"><img title="中心一角" src="images/img1.jpg"></a> </p>
+            <p class="rollName"><a href="#">中心一角1</a> </p>
         </li>
         <li id="tabAutoPlay2"  style="display:none;">
-            <p class="rollPic"><a href="#" ><img title="中心一角" src="images/img2.jpg"></a> </p>
-            <p class="rollName"><a href="#" >中心一角2</a> </p>
+            <p class="rollPic"><a href="#"><img title="中心一角" src="images/img2.jpg"></a> </p>
+            <p class="rollName"><a href="#">中心一角2</a> </p>
         </li>
         <li id="tabAutoPlay3"  style="display:none;">
-            <p class="rollPic"><a href="#" ><img title="中心一角" src="images/img3.jpg"></a> </p>
-            <p class="rollName"><a href="#" >中心一角3</a> </p>
+            <p class="rollPic"><a href="#"><img title="中心一角" src="images/img3.jpg"></a> </p>
+            <p class="rollName"><a href="#">中心一角3</a> </p>
         </li>
     </ul>
     <script src="js/jquery144.js"></script>
@@ -64,10 +64,10 @@
                 });
         $("#tab_Auto_Play a").hover(
                 function () {
-                    $("#tab_Auto_Play a").css("opacity","1");
+                    $(this).css("opacity","1");
                 },
                 function () {
-                    $("#tab_Auto_Play a").css("opacity","0.6");
+                    $(this).css("opacity","0.6");
                 });
     </script>
 </div>
