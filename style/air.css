@@ -152,12 +152,13 @@ a:hover {
 .line1 {
   width: 1210px;
   height: 1px;
-  border-top: 1px solid #E1E1E1;
+  border-top: 1px solid #A3A3A3;
 }
 /*全新的轮播样式a2*/
 .rollBox {
   width: 1210px;
   height: 450px;
+  border: 1px solid #A3A3A3;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -212,9 +213,6 @@ a:hover {
   border: 1px solid #21a5c1;
   border-radius: 50%;
   background: #1FD0F6;
-}
-.rollBox .tab_content {
-  width: 1760px;
 }
 .rollBox .tab_content li {
   width: 100%;

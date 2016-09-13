@@ -68,14 +68,13 @@ a:hover{
 .line1{
   width: @pageWidth;
   height:1px;
-  border-top:1px solid #E1E1E1;
+  border-top:1px solid #A3A3A3;
 }
 /*全新的轮播样式a2*/
-@swfWidth:1210px;
-@swfHeight:450px;
 .rollBox{
-  width:@swfWidth;
-  height:@swfHeight;
+  width:1210px;//定义外包容器宽高
+  height:450px;
+  border:1px solid #A3A3A3;
   margin:0 auto;
   position: relative;
   overflow: hidden;
@@ -130,12 +129,11 @@ a:hover{
         border-radius: 50%;
         background:#1FD0F6;
       }
-
     }
   }
-  //切换内容的样式
+  //切换内容的样式 ul
   .tab_content{
-    width:1760px;
+    //width:1760px;
     li{
       width:100%;
       height:100%;
