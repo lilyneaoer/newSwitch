@@ -5,19 +5,17 @@
     <title>newSwitch</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link href="style/reset.css" rel="stylesheet">
+    <!--<link href="style/reset.css" rel="stylesheet">-->
     <link href="style/air.css" rel="stylesheet">
     <script src="js/less.js"></script>
     <script src="js/jquery144.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-          alert("test");
-        /*var tabNum=$(".tab_content li").length();
-          alert("tabNum:"+tabNum);
-
+      var tabNum=$(".tabAutoPlayChid").length;
+      alert("tabNum:"+tabNum);
           for(i=0;i<tabNum;i++)  {
 
-        }*/
+          }
       });
     </script>
 </head>
@@ -33,15 +31,15 @@
         <li class="tab"><a href="javascript:" class="tab_a" data-rel="tabAutoPlay3">3</a></li>
     </ul>
     <ul class="tab_content">
-        <li id="tabAutoPlay1" >
+        <li id="tabAutoPlay1" class="tabAutoPlayChid" >
             <p class="rollPic"><a href="#"><img title="中心一角" src="images/img1.jpg"></a> </p>
             <p class="rollName"><a href="#">中心一角1</a> </p>
         </li>
-        <li id="tabAutoPlay2"  style="display:none;">
+        <li id="tabAutoPlay2" class="tabAutoPlayChid"  style="display:none;">
             <p class="rollPic"><a href="#"><img title="中心一角" src="images/img2.jpg"></a> </p>
             <p class="rollName"><a href="#">中心一角2</a> </p>
         </li>
-        <li id="tabAutoPlay3"  style="display:none;">
+        <li id="tabAutoPlay3" class="tabAutoPlayChid"  style="display:none;">
             <p class="rollPic"><a href="#"><img title="中心一角" src="images/img3.jpg"></a> </p>
             <p class="rollName"><a href="#">中心一角3</a> </p>
         </li>
