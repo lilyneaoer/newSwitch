@@ -179,7 +179,10 @@ a:hover {
   transition: all 0.3s ease-out;
   background: url("../images/index.png") no-repeat;
 }
-.rollBox .tabAutoPlay a.pause {
+.rollBox .tabAutoPlay a.pause,
+.rollBox .tabAutoPlay a.play {
+  opacity: 1;
+  left: 500px;
   display: none;
 }
 .rollBox .tabAutoPlay a.prev {

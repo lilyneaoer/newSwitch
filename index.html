@@ -35,6 +35,9 @@
         <li class="tab"><a href="javascript:" class="tab_a" data-rel="tabAutoPlay3">
            杀杀杀杀
         </a></li>
+        <li class="tab"><a href="javascript:" class="tab_a" data-rel="tabAutoPlay4">
+            思思思思
+        </a></li>
     </ul>
     <ul class="tab_content">
         <li id="tabAutoPlay1" class="tabAutoPlayChid" >
@@ -46,6 +49,10 @@
             <p class="rollName"><a href="#">中心一角2</a> </p>
         </li>
         <li id="tabAutoPlay3" class="tabAutoPlayChid"  style="display:none;">
+            <p class="rollPic"><a href="#"><img title="中心一角" src="images/img3.jpg"></a> </p>
+            <p class="rollName"><a href="#">中心一角3</a> </p>
+        </li>
+        <li id="tabAutoPlay4" class="tabAutoPlayChid"  style="display:none;">
             <p class="rollPic"><a href="#"><img title="中心一角" src="images/img3.jpg"></a> </p>
             <p class="rollName"><a href="#">中心一角3</a> </p>
         </li>
@@ -65,7 +72,7 @@
             animation: "translate",
             eventType: "hover",
             autoTime: 4500,
-            hoverStop: false,
+            hoverStop: true,
             container: $("#tab_Auto_Play")
         });
         //设置点点点及按钮水平居中
