@@ -171,7 +171,7 @@ a:hover {
   position: absolute;
   width: 40px;
   height: 100px;
-  top: 50%;
+  top: 30%;
   opacity: 0;
   display: block;
   z-index: 9999;
@@ -198,6 +198,8 @@ a:hover {
 .rollBox .tabBtn li {
   float: left;
   background: #F9F9F9;
+  position: relative;
+  top: 15px;
   text-align: center;
 }
 .rollBox .tabBtn li a.tab_a {
@@ -212,6 +214,10 @@ a:hover {
   border-bottom: 1px solid #E5E5E5;
 }
 .rollBox .tabBtn li a.tab_on {
+  height: 68px;
+  line-height: 68px;
+  bottom: 15px;
+  position: relative;
   border-top: 1px solid #C3ADAD;
   border-right: 1px solid #C3ADAD;
   border-left: 1px solid #C3ADAD;
