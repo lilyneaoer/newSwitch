@@ -8,14 +8,14 @@
     <!--<link href="style/reset.css" rel="stylesheet">-->
     <link href="style/air.css" rel="stylesheet">
     <script src="js/less.js"></script>
-    <script src="js/jquery144.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
       var tabNum=$(".tabAutoPlayChid").length;
-      alert("tabNum:"+tabNum);
-          for(i=0;i<tabNum;i++)  {
+      //alert("tabNum:"+tabNum);
+          //for(i=0;i<tabNum;i++)  {
 
-          }
+          //}
       });
     </script>
 </head>
@@ -26,9 +26,15 @@
     <div id="tab_Auto_Play" class="tabAutoPlay"></div>
     <!--点点点-->
     <ul id="tab_Auto_Btn" class="tabBtn">
-        <li class="tab"><a href="javascript:" class="tab_a tab_on" data-rel="tabAutoPlay1">1</a></li>
-        <li class="tab"><a href="javascript:" class="tab_a" data-rel="tabAutoPlay2">2</a></li>
-        <li class="tab"><a href="javascript:" class="tab_a" data-rel="tabAutoPlay3">3</a></li>
+        <li class="tab"><a href="javascript:" class="tab_a tab_on" data-rel="tabAutoPlay1">
+            <img src="images/s1.jpg">
+        </a></li>
+        <li class="tab"><a href="javascript:" class="tab_a" data-rel="tabAutoPlay2">
+            <img src="images/s2.jpg">
+        </a></li>
+        <li class="tab"><a href="javascript:" class="tab_a" data-rel="tabAutoPlay3">
+            <img src="images/s3.jpg">
+        </a></li>
     </ul>
     <ul class="tab_content">
         <li id="tabAutoPlay1" class="tabAutoPlayChid" >

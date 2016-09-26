@@ -108,25 +108,31 @@ a:hover{
   }
   //点点点的样式
   .tabBtn{
-    bottom:15px;
     left:50%;
+    bottom:-15px;
     position: absolute;
     z-index: 99;
     li{
       float:left;
-      margin:0 10px 0 0;
-      text-indent: -9999px;
+      margin:0 5px 0 0;
+      //text-indent: -9999px;
       a.tab_a{
-        width:10px;
-        height:10px;
+        width:143px;
+        height:53px;
         display: block;
-        border:1px solid #EEE;
-        border-radius: 50%;
+        opacity: 0.6;
+        //bottom:-10px;
+        //border:1px solid #EEE;
+        //border-radius: 50%;
         background:#FFF;
       }
       a.tab_on{
-        border:1px solid #21a5c1;
-        border-radius: 50%;
+        border:4px solid #F65E5F;
+        opacity: 1;
+        position: relative;
+        bottom:15px;
+        //border:1px solid #21a5c1;
+        //border-radius: 50%;
         background:#1FD0F6;
       }
     }
