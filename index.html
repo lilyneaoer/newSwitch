@@ -52,18 +52,25 @@
     </ul>
     <script src="js/jquery-powerSwitch.js"></script>
     <script>
+        var adData=[{
+            src:"http://nxdemo.xiaomac.net/mxh/powerSwitch/images/img1.jpg",
+            title:"庆国庆，巨实惠",
+            link:"http://shop.ynnanxun.com/goods.php?id=480"
+        }];
+    </script>
+    <script>
         // 绑定
         $("#tab_Auto_Btn a").powerSwitch({
             classAdd: "tab_on",
             animation: "translate",
             eventType: "hover",
-            autoTime: 8500,
+            autoTime: 9998500,
             hoverStop: false,
             container: $("#tab_Auto_Play")
         });
         //设置点点点及按钮水平居中
-        $("#tab_Auto_Play a").css("margin-top",-$("#tab_Auto_Play a").height()/2);
-        $("#tab_Auto_Btn").css("margin-left",-$("#tab_Auto_Btn").width()/2);
+        //$("#tab_Auto_Play a").css("margin-top",-$("#tab_Auto_Play a").height()/2);
+        //$("#tab_Auto_Btn").css("margin-left",-$("#tab_Auto_Btn").width()/2);
         //控制按钮渐入渐出
         $("#roll_Box").hover(
                 function () {
@@ -80,8 +87,8 @@
                     $(this).css("opacity","0.6");
                 });
         var tabNum=$(".tab").length;
-        var tabWidth=1210/tabNum+"px";
-        //alert("tabWidth:"+tabWidth+"tabNum:"+tabNum);
+        var tabWidth=(1210-(tabNum+1))/tabNum+"px";
+        alert("tabWidth:"+tabWidth+"___tabNum:"+tabNum);
         $(".tab").css("width",tabWidth);
     </script>
 </div>
