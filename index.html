@@ -27,13 +27,13 @@
     <!--点点点-->
     <ul id="tab_Auto_Btn" class="tabBtn">
         <li class="tab"><a href="javascript:" class="tab_a tab_on" data-rel="tabAutoPlay1">
-            <img src="images/s1.jpg">
+            妖妖妖妖
         </a></li>
         <li class="tab"><a href="javascript:" class="tab_a" data-rel="tabAutoPlay2">
-            <img src="images/s2.jpg">
+            貮貮貮貮
         </a></li>
         <li class="tab"><a href="javascript:" class="tab_a" data-rel="tabAutoPlay3">
-            <img src="images/s3.jpg">
+           杀杀杀杀
         </a></li>
     </ul>
     <ul class="tab_content">
@@ -57,7 +57,7 @@
             classAdd: "tab_on",
             animation: "translate",
             eventType: "hover",
-            autoTime: 4500,
+            autoTime: 8500,
             hoverStop: false,
             container: $("#tab_Auto_Play")
         });
@@ -79,6 +79,10 @@
                 function () {
                     $(this).css("opacity","0.6");
                 });
+        var tabNum=$(".tab").length;
+        var tabWidth=1210/tabNum+"px";
+        //alert("tabWidth:"+tabWidth+"tabNum:"+tabNum);
+        $(".tab").css("width",tabWidth);
     </script>
 </div>
 <!--轮播e-->
