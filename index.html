@@ -11,11 +11,7 @@
     <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-      var tabNum=$(".tabAutoPlayChid").length;
-      //alert("tabNum:"+tabNum);
-          //for(i=0;i<tabNum;i++)  {
-
-          //}
+       //var tabNum=$(".tabAutoPlayChid").length;
       });
     </script>
 </head>
@@ -26,12 +22,12 @@
     <div id="tab_Auto_Play" class="tabAutoPlay"></div>
     <!--点点点-->
     <ul id="tab_Auto_Btn" class="tabBtn">
-       <!--用下面的json生成广告-->
+       <!--用下面的json生成按钮-->
     </ul>
     <ul class="tab_content" id="tab_content">
        <!--用下面的json生成广告-->
     </ul>
-    <script src="js/jquery-powerSwitch.js"></script>
+    <script src="js/jquery-powerSwitch.min.js"></script>
     <script>
         var adData=[{
             id:1,
@@ -104,6 +100,7 @@
                 function () {
                     $(this).css("opacity","0.6");
                 });
+        //点点点自适应宽度，有叉个就叉个等分
         var tabNum=$(".tab").length;
         var tabWidth=(1210-(tabNum+1))/tabNum+"px";
         //alert("tabWidth:"+tabWidth+"___tabNum:"+tabNum);
