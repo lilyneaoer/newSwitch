@@ -10,9 +10,9 @@
     <script src="js/less.js"></script>
     <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript">
-      $(document).ready(function () {
-       //var tabNum=$(".tabAutoPlayChid").length;
-      });
+        $(document).ready(function () {
+            //var tabNum=$(".tabAutoPlayChid").length;
+        });
     </script>
 </head>
 <body>
@@ -22,92 +22,89 @@
     <div id="tab_Auto_Play" class="tabAutoPlay"></div>
     <!--点点点-->
     <ul id="tab_Auto_Btn" class="tabBtn">
-       <!--用下面的json生成按钮-->
+        <!--用下面的json生成按钮-->
     </ul>
     <ul class="tab_content" id="tab_content">
-       <!--用下面的json生成广告-->
+        <!--用下面的json生成广告-->
     </ul>
-    <script src="js/jquery-powerSwitch.min.js"></script>
-    <script>
-        var adData=[{
-            id:1,
-            src:"http://nxdemo.xiaomac.net/mxh/powerSwitch/images/img1.jpg",
-            title:"活动一一",
-            link:"http://shop.ynnanxun.com/goods.php?id=481"
-        },{
-            id:2,
-            src:"http://nxdemo.xiaomac.net/mxh/powerSwitch/images/img2.jpg",
-            title:"活动二二",
-            link:"http://shop.ynnanxun.com/goods.php?id=482"
-        },{
-            id:3,
-            src:"http://nxdemo.xiaomac.net/mxh/powerSwitch/images/img3.jpg",
-            title:"活动三三",
-            link:"http://shop.ynnanxun.com/goods.php?id=483"
-        },{
-            id:4,
-            src:"http://nxdemo.xiaomac.net/mxh/powerSwitch/images/img4.jpg",
-            title:"活动四四",
-            link:"http://shop.ynnanxun.com/goods.php?id=484"
-        }];
-    </script>
-    <script>
-        //根据json生成广告
-        var htmlAd="",htmlBtn="";
-        $.each(adData,function(index,obj){
-            if(index==0){
-                htmlAd=htmlAd+"<li id='tabAutoPlay"+obj.id+"' class='tabAutoPlayChid'<a href='"+obj.link+"'><img title='"+obj.title+" 'src='"+obj.src+"'></a></li>" ;
-                htmlBtn=htmlBtn+"<li class='tab'><a href='javascript:' class='tab_a tab_on' data-rel='tabAutoPlay"+obj.id+"'>"+obj.title+"</a></li>";
-            }
-            else{
-                htmlAd=htmlAd+"<li id='tabAutoPlay"+obj.id+"' class='tabAutoPlayChid' style='display: none;'<a href='"+obj.link+"'><img title='"+obj.title+" 'src='"+obj.src+"'></a></li>" ;
-                htmlBtn=htmlBtn+"<li class='tab'><a href='javascript:' class='tab_a' data-rel='tabAutoPlay"+obj.id+"'>"+obj.title+"</a></li>";
-            }
-        });
-        /*<li id="tabAutoPlay4" class="tabAutoPlayChid"  style="display:none;">
-                <p class="rollPic"><a href="#"><img title="中心一角" src="images/img3.jpg"></a> </p>
-                <p class="rollName"><a href="#">中心一角3</a> </p>
-                </li>*/
-        /*<li class="tab"><a href="javascript:" class="tab_a tab_on" data-rel="tabAutoPlay1">
-                妖妖妖妖
-                </a></li>*/
-        $("#tab_content").html(htmlAd);
-        $("#tab_Auto_Btn").html(htmlBtn);
-        // 绑定
-        $("#tab_Auto_Btn a").powerSwitch({
-            classAdd: "tab_on",
-            animation: "translate",
-            eventType: "hover",
-            autoTime: 4500,
-            hoverStop: true,
-            container: $("#tab_Auto_Play")
-        });
-        //设置点点点及按钮水平居中
-        //$("#tab_Auto_Play a").css("margin-top",-$("#tab_Auto_Play a").height()/2);
-        //$("#tab_Auto_Btn").css("margin-left",-$("#tab_Auto_Btn").width()/2);
-        //控制按钮渐入渐出
-        $("#roll_Box").hover(
-                function () {
-                    $("#tab_Auto_Play a").css("opacity","0.6");
-                },
-                function () {
-                    $("#tab_Auto_Play a").css("opacity","0");
-                });
-        $("#tab_Auto_Play a").hover(
-                function () {
-                    $(this).css("opacity","1");
-                },
-                function () {
-                    $(this).css("opacity","0.6");
-                });
-        //点点点自适应宽度，有叉个就叉个等分
-        var tabNum=$(".tab").length;
-        var tabWidth=(1210-(tabNum+1))/tabNum+"px";
-        //alert("tabWidth:"+tabWidth+"___tabNum:"+tabNum);
-        $(".tab").css("width",tabWidth);
-    </script>
 </div>
+<script src="js/jquery-powerSwitch.min.js"></script>
+<script>
+    var adData = [{
+        id: 1,
+        src: "http://www.ynnanxun.com/templets/smore/uploadtemplets/nxindex/temp/banner1.jpg",
+        title: "国庆放价",
+        link: "http://shop.ynnanxun.com/goods.php?id=1055"
+    }, {
+        id: 2,
+        src: "http://www.ynnanxun.com/templets/smore/uploadtemplets/nxindex/temp/banner2.jpg",
+        title: "花饼茶",
+        link: "http://shop.ynnanxun.com/search.php?keywords=%E8%8A%B1%E9%A5%BC%E8%8C%B6"
+    }, {
+        id: 3,
+        src: "http://www.ynnanxun.com/templets/smore/uploadtemplets/nxindex/temp/banner3.jpg",
+        title: "南寻贡米",
+        link: "http://shop.ynnanxun.com/special/rice/index.html"
+    }, {
+        id: 4,
+        src: "http://www.ynnanxun.com/templets/smore/uploadtemplets/nxindex/temp/csbanner.jpg",
+        title: "长水展示中心",
+        link: "http://www.ynnanxun.com/fwzx/kmcsjc/"
+    }, {
+        id: 5,
+        src: "http://www.ynnanxun.com/templets/smore/uploadtemplets/nxindex/temp/img4.jpg",
+        title: "云龙馆",
+        link: "http://www.ynnanxun.com/qcdz/yunlong/"
+    }];
+</script>
+<script>
+    //根据json生成广告
+    var htmlAd = "", htmlBtn = "";
+    $.each(adData, function (index, obj) {
+        if (index == 0) {
+            htmlAd = htmlAd + "<li id='tabAutoPlay" + obj.id + "' class='tabAutoPlayChid'><a href='" + obj.link + "' target='_blank'><img title='" + obj.title + "'src='" + obj.src + "'></a></li>";
+            htmlBtn = htmlBtn + "<li class='tabs'><a href='javascript:' class='tab_a tab_on' data-rel='tabAutoPlay" + obj.id + "'>" + obj.title + "</a></li>";
+        }
+        else {
+            htmlAd = htmlAd + "<li id='tabAutoPlay" + obj.id + "' class='tabAutoPlayChid' style='display: none;'><a href='" + obj.link + "'target='_blank'><img title='" + obj.title + "'src='" + obj.src + "'></a></li>";
+            htmlBtn = htmlBtn + "<li class='tabs'><a href='javascript:' class='tab_a' data-rel='tabAutoPlay" + obj.id + "'>" + obj.title + "</a></li>";
+        }
+    });
+    $("#tab_content").html(htmlAd);
+    $("#tab_Auto_Btn").html(htmlBtn);
+    // 绑定
+    $("#tab_Auto_Btn a").powerSwitch({
+        classAdd: "tab_on",
+        animation: "translate",
+        eventType: "hover",
+        autoTime: 4500,
+        hoverStop: true,
+        container: $("#tab_Auto_Play")
+    });
+    //设置点点点及按钮水平居中
+    //$("#tab_Auto_Play a").css("margin-top",-$("#tab_Auto_Play a").height()/2);
+    //$("#tab_Auto_Btn").css("margin-left",-$("#tab_Auto_Btn").width()/2);
+    //控制按钮渐入渐出
+    $("#roll_Box").hover(
+            function () {
+                $("#tab_Auto_Play a").css("opacity", "0.6");
+            },
+            function () {
+                $("#tab_Auto_Play a").css("opacity", "0");
+            });
+    $("#tab_Auto_Play a").hover(
+            function () {
+                $(this).css("opacity", "1");
+            },
+            function () {
+                $(this).css("opacity", "0.6");
+            });
+    //点点点自适应宽度，有叉个就叉个等分
+    var tabNum = $(".tabs").length;
+    var tabWidth = 1209 / tabNum + "px";
+    //alert("tabWidth:"+tabWidth+"___tabNum:"+tabNum);
+    $(".tabs").css("width", tabWidth);
+</script>
 <!--轮播e-->
-<div class="11">11</div><div class="11 22">22</div>
 </body>
 </html>
