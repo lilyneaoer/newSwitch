@@ -1,0 +1,50 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="banner">
+	        <!--中秋通知s-->
+      <style>
+		   .notice{
+		   		font-size:14px;
+				line-height:150%;
+				color:#F65E5F;
+		   }
+		   </style>
+         <!--  <div class="notice"><p>尊贵的会员:</p><p style="text-indent:2em;">
+您好， 感谢您对南寻网的支持！根据国务院发布关于中秋节调休放假的通知，我司发货时间调整如下：
+2016年9月14日至17日（周三至周六）期间的所下订单发货时间延后至9月18日（周日）统一发货，由此给您造成不便，敬请谅解。</p><p style="text-indent:2em;">
+南寻网全体员工祝您中秋节快乐，阖家幸福！</p></div>-->
+ <!--中秋通知e-->
+  <div id="slider" class="slider" style="overflow: hidden; visibility: visible; list-style: none; position: relative;">
+    <ul id="sliderlist" class="sliderlist" style="position: relative; overflow: hidden; transition: left 600ms ease; -webkit-transition: left 600ms ease; width: 2400px; left: -600px;">
+       <!-- {foreach from=$pictures item=picture name=name}-->
+      <li style="float: left; display: block; width: 600px;"><span><a  href="javacript:void(0)"><img title="" width="100%" src="{if $picture.thumb_url}{$picture.img_url}{else}{$picture.img_url}{/if}"></a></span></li>
+       <!--{/foreach}-->
+    </ul>
+    <div id="pagenavi">
+    <!-- {foreach from=$pictures item=picture name=indexname}-->
+    <a href="javascript:void(0);" {if $smarty.foreach.indexname.first}class="active"{/if}></a>
+     <!--{/foreach}-->
+</div>
+  </div>
+</div>
+<div class="s_bottom"></div>
+<script type="text/javascript">$(function(){
+	$("div.module_special .wrap .major ul.list li:last-child").addClass("remove_bottom_line");
+});
+var active=0,
+	as=document.getElementById('pagenavi').getElementsByTagName('a');
+	
+for(var i=0;i<as.length;i++){
+	(function(){
+		var j=i;
+		as[i].onclick=function(){
+			t2.slide(j);
+			return false;
+		}
+	})();
+}
+var t2=new TouchSlider({id:'sliderlist', speed:600, timeout:6000, before:function(index){
+		as[active].className='';
+		active=index;
+		as[active].className='active';
+	}});
+</script>

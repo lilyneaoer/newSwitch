@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>南寻网商城 买特产送亲友，买伴手礼、云南特产、云南土特产就上南寻网 400-172-8899 </title>
+    <meta name="Keywords" content="云南土特产 云南特产 南寻网 云南土特产商城 云南土特产干货 云南伴手礼 云南好吃的 400-172-8899"/>
+    <meta name="Description" content="云南土特产 南寻网将带您寻找不一样的云南，带您领略特色的云南，让你见到最真实的云南。致力于打造最云南、最绿色、最生态的土特产及旅游的O2O平台。"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="modeName=750-12" name="grid">
+    <link rel="stylesheet" href="http://shop.ynnanxun.com/mobile/css/reset.css"/>
+    <link rel="stylesheet" href="../css/style.css?v=1510"/>
+    <link rel="stylesheet" href="http://shop.ynnanxun.com/mobile/css/swiper.min.css">
+    <script src="http://shop.ynnanxun.com/mobile/js/jquery1121.js"></script>
+    <script src="http://shop.ynnanxun.com/mobile/js/jquery.scrollLoading-min.js"></script>
+    <script src="http://shop.ynnanxun.com/mobile/js/build/makegrid.debug.js"></script>
+    <script src="http://shop.ynnanxun.com/mobile/js/build/flexible_css.js"></script>
+    <script src="http://shop.ynnanxun.com/mobile/js/build/flexible.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".imgLoad").scrollLoading({
+                callback: function() {
+                    $(this).hide();
+                    $(this).fadeIn();
+                }
+            });
+            var imgNum = $(".imgLoad").length;//返回延迟加载图片数量
+            for (i = 0; i < 2; i++) {
+                var imgNew = new Image();
+                imgNew.src = $(".imgLoad").eq(i).attr("data-url");
+                //var set = setInterval(check,40);
+                // 加载完成获取宽高
+                imgNew.onload = function () {
+                    $(".imgLoad").eq(i).css("backround-size:", imgNew.width);
+                    //alert(imgNew.width);
+                };
+            }
+            //$(".fixedTop,.nxTop,.pageBody,.gotop,footer").hide();//隐藏主界面
+            //$(".adShow").hide();
+            //adShow:过渡广告
+            //search_hide:搜索页
+            $(".search_hide").hide();
+            fixedHeight = $(window).height();//动态写入过渡广告高度，位置则由style.css控制
+            $(".adShow").css("height", fixedHeight);
+            //var timer=setTimeout("divShow()",3000);//3秒后隐藏广告显示主界面
+            $(".searchBar").click(function () {
+                //隐藏主界面，显示搜索页
+                $(".fixedTop,.nxTop,.pageBody,.gotop,footer").fadeOut("slow");
+                $(".search_hide").show();
+            });
+            //地州列表伸缩
+            $("#dzListOn,.ynMap,.linkC li:eq(3)").click(function () {
+                $(this).toggleClass("dzListUp");
+                $(".dzListOn.dzListUp").css({
+                    //"background-image":"url('http://shop.ynnanxun.com/mobile/slice/arrow_up.png')",//更改箭头
+                    //"background-position":"center top"
+                });
+                $(".dzShow").animate({
+                    width: 'toggle',
+                    height: 'toggle'
+                }, 1500);
+                $("html,body").animate({scrollTop: $(".ynMap").offset().top}, 1000);
+            });
+            $(".dzListOn.dzListUp").click(function () {
+                $(".dzListOn.dzListUp").css({
+                    "background-image": "url('http://shop.ynnanxun.com/mobile/slice/arrow_down.png')",//更改箭头
+                    "background-position": "center top"
+                });
+            });
+            //滚动务及返回顶部
+            $(".gotop").hide();
+            window.onscroll = function () {
+                var rollBar_positon = document.documentElement.scrollTop || document.body.scrollTop;//获取滚动条位置，fixedHeight为当前窗口高度
+                var isShow = false;
+                var sear_hide_sta = $(".sear_hide").css("display");
+                if (sear_hide_sta == "block") {
+                    isShow = true;
+                }
+                else {
+                    isShow = false;
+                }
+                if (rollBar_positon >= fixedHeight) {
+                    $(".nxTop,.gotop").fadeIn("slow");
+                    $(".fixedTop").hide();
+                }
+                /* if(isShow==true && rollBar_positon < fixedHeight){
+                 $(".fixedTop").hide();
+                 }*/
+                else {
+                    if (isShow == true) {
+                        $(".fixedTop").hide();
+                    }
+                    else {
+                        $(".fixedTop").show();
+                        $(".nxTop,.gotop").fadeOut("slow");
+                    }
+                }
+            }
+        });
+        function divShow() {
+            $(".adShow").hide();
+            $(".fixedTop,.pageBody,.gotop,footer").fadeIn("slow");
+        }
+    </script>
+</head>
+<body>
+<div class="fixedTop">
+    <a href="http://shop.ynnanxun.com/mobile/catalog.php"><img
+            src="http://shop.ynnanxun.com/mobile/slice/icon_cate.png"></a>
+    <a href="http://shop.ynnanxun.com/mobile/user.php"><img
+            src="http://shop.ynnanxun.com/mobile/slice/icon_mem.png"></a>
+    <div class="clear"></div>
+</div>
+<div class="nxTop">
+    <a href="http://shop.ynnanxun.com/mobile/catalog.php"><img
+            src="http://shop.ynnanxun.com/mobile/slice/icon_cateW.png"></a>
+
+    <a href="http://shop.ynnanxun.com/mobile/user.php"><img
+            src="http://shop.ynnanxun.com/mobile/slice/icon_memW.png"></a>
+    <div class="searchBar">
+        <p>请输入您要搜索的商品</p>
+    </div>
+    <div class="clear"></div>
+</div>
+<!--pageBodyStart-->
+<div class="pageBody">
+    <!--轮播s-->
+    <div class="indexSwf">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="http://shop.ynnanxun.com/mobile/search.php?encode=YTozOntzOjQ6InR5cGUiO3M6MTU6IltvYmplY3QgV2luZG93XSI7czo4OiJrZXl3b3JkcyI7czo2OiLmnpzlhrsiO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDczMzMwODQwO30="><img
+                            src="http://shop.ynnanxun.com/mobile/img/hbhd-banner-m.png"> </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="http://shop.ynnanxun.com/mobile/qcdz/kmcsjc/"><img
+                            src="http://shop.ynnanxun.com/mobile/img/adcs.jpg"> </a>
+                </div>
+
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- Swiper JS -->
+        <script src="http://shop.ynnanxun.com/mobile/js/swiper.min.js"></script>
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                autoplay: 3000,
+                loop: true,
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                autoplayDisableOnInteraction: false,
+            });
+        </script>
+    </div>
+    <!--轮播e-->
+    <div class="rollBarWrap">
+        <div class="rollBar">
+            <img src="http://shop.ynnanxun.com/mobile/slice/icon_logo.png" class="nxLogo">
+            <div class="rollTxt">
+                <!--滚动文字s-->
+                <div class="swiper-container2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><p><a
+                                href="http://shop.ynnanxun.com/mobile/search.php?encode=YTozOntzOjQ6InR5cGUiO3M6MTU6IltvYmplY3QgV2luZG93XSI7czo4OiJrZXl3b3JkcyI7czo2OiLmnpzlhrsiO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDczMzMwODQwO30=">玫瑰果糕
+                            鲜花果冻 买二送一</a></p></div>
+                        <div class="swiper-slide"><p><a href="http://www.ynnanxun.com/phone/raiders/show_2216.html">不可错过的云南美食-过桥米线</a>
+                        </p></div>
+
+                        <div class="swiper-slide"><p><a href="http://www.ynnanxun.com/phone/raiders/show_2326.html">雪山脚下的百年茨中教堂</a>
+                        </p></div>
+                    </div>
+                </div>
+                <!-- Swiper JS -->
+                <!-- Initialize Swiper -->
+                <script>
+                    var swiper2 = new Swiper('.swiper-container2', {
+                        paginationClickable: true,
+                        direction: 'vertical',
+                        autoplay: 2500,
+                        loop: true,
+                        autoplayDisableOnInteraction: false,
+                    });
+                </script>
+                <!--滚动文字e-->
+            </div>
+        </div>
+        <!--搜索s-->
+        <div class="searchBar">
+            <span>搜索</span>
+        </div>
+        <!--搜索e-->
+        <div class="clear"></div>
+    </div>
+<!--	<!--中秋公告s-->
+	<img src="http://shop.ynnanxun.com/mobile/img/zqnotice_m.jpg">
+	<!--中秋公告e-->-->
+    <div class="quickLinkWrap">
+        <div class="quickLinkB">
+            <a href="http://shop.ynnanxun.com/mobile/qcdz/kmcsjc/"><img
+                    src="http://shop.ynnanxun.com/mobile/slice/linkE.jpg"></a>
+            <a href="http://shop.ynnanxun.com/mobile/qcdz/yunlong/"><img
+                    src="http://shop.ynnanxun.com/mobile/slice/linkF.jpg"></a>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="goodsAd">
+        <a href="http://shop.ynnanxun.com/mobile/category.php?id=683"><img
+                src="http://shop.ynnanxun.com/mobile/img/goodsAdTitle.jpg"></a>
+        <a href="http://shop.ynnanxun.com/mobile/search.php?encode=YTozOntzOjQ6InR5cGUiO3M6MToiMCI7czo4OiJrZXl3b3JkcyI7czoxMDoi54mb6L2n57OWICI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NzMzMjc1MDc7fQ=="><img
+                src="http://shop.ynnanxun.com/mobile/img/goodsAd1.jpg"></a>
+        <a href="http://shop.ynnanxun.com/mobile/goods.php?id=811"><img
+                src="http://shop.ynnanxun.com/mobile/img/goodsAd2.jpg"></a>
+        <a href="http://shop.ynnanxun.com/mobile/search.php?keywords=%E9%B2%9C%E8%8A%B1%E9%A5%BC"><img
+                src="http://shop.ynnanxun.com/mobile/img/goodsAd3.jpg"></a>
+    </div>
+    <div class="huaWen">花纹</div>
+    <div class="linkCWrap">
+        <ul class="linkC">
+            <li><a href="http://www.ynnanxun.com/phone/raiders/yunnan-15">旅游攻略</a></li>
+            <li><a href="http://www.ynnanxun.com/phone/raiders/yunnan-14">民族风俗</a></li>
+            <li><a href="http://www.ynnanxun.com/phone/raiders/yunnan-41">美食攻略</a></li>
+            <li><a href="javascript:;">地州频道</a></li>
+            <div class="clear"></div>
+        </ul>
+        <a href="#" class="ynMap"><img class="imgLoad imgYnMap" src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                       style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                       data-url="http://shop.ynnanxun.com/mobile/slice/icon_ynmap.jpg"> </a>
+    </div>
+    <div class="dzList">
+        <div id="dzListOn" class="dzListOn">
+            dzListOn
+        </div>
+        <ul>
+            <li><a href="http://www.ynnanxun.com/phone/raiders/dali"><img class="imgLoad"
+                                                                          src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                          style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                          data-url="http://shop.ynnanxun.com/mobile/slice/dz_01.jpg">
+            </a></li>
+            <li><a href="http://www.ynnanxun.com/phone/raiders/lijiang"><img class="imgLoad"
+                                                                             src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                             style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                             data-url="http://shop.ynnanxun.com/mobile/slice/dz_02.jpg">
+            </a></li>
+
+            <li><a href="http://www.ynnanxun.com/phone/raiders/chuxiong"><img class="imgLoad"
+                                                                              src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                              style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                              data-url="http://shop.ynnanxun.com/mobile/slice/dz_03.jpg">
+            </a></li>
+            <li><a href="http://www.ynnanxun.com/phone/raiders/kunming"><img class="imgLoad"
+                                                                             src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                             style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                             data-url="http://shop.ynnanxun.com/mobile/slice/dz_04.jpg">
+            </a></li>
+            <li class="dzShow"><a href="http://www.ynnanxun.com/phone/raiders/jinghong"><img class="imgLoad"
+                                                                                             src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                             style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                             data-url="http://shop.ynnanxun.com/mobile/slice/dz_05.jpg">
+            </a></li>
+            <li class="dzShow"><a href="http://www.ynnanxun.com/phone/raiders/honghe"><img class="imgLoad"
+                                                                                           src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                           style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                           data-url="http://shop.ynnanxun.com/mobile/slice/dz_06.jpg">
+            </a></li>
+            <li class="dzShow"><a href="http://www.ynnanxun.com/phone/raiders/puer"><img class="imgLoad"
+                                                                                         src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                         style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                         data-url="http://shop.ynnanxun.com/mobile/slice/dz_07.jpg">
+            </a></li>
+            <li class="dzShow"><a href="http://www.ynnanxun.com/phone/raiders/lincang"><img class="imgLoad"
+                                                                                            src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                            style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                            data-url="http://shop.ynnanxun.com/mobile/slice/dz_08.jpg">
+            </a></li>
+            <li class="dzShow"><a href="http://www.ynnanxun.com/phone/raiders/wenshan"><img class="imgLoad"
+                                                                                            src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                            style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                            data-url="http://shop.ynnanxun.com/mobile/slice/dz_09.jpg">
+            </a></li>
+            <li class="dzShow"><a href="http://www.ynnanxun.com/phone/raiders/dehong"><img class="imgLoad"
+                                                                                           src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                           style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                           data-url="http://shop.ynnanxun.com/mobile/slice/dz_10.jpg">
+            </a></li>
+            <li class="dzShow"><a href="http://www.ynnanxun.com/phone/raiders/xianggelila"><img class="imgLoad"
+                                                                                                src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                                style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                                data-url="http://shop.ynnanxun.com/mobile/slice/dz_11.jpg">
+            </a></li>
+            <li class="dzShow"><a href="http://www.ynnanxun.com/phone/raiders/nujiang"><img class="imgLoad"
+                                                                                            src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                            style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                            data-url="http://shop.ynnanxun.com/mobile/slice/dz_12.jpg">
+            </a></li>
+            <li class="dzShow"><a href="http://www.ynnanxun.com/phone/raiders/qujing"><img class="imgLoad"
+                                                                                           src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                           style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                           data-url="http://shop.ynnanxun.com/mobile/slice/dz_13.jpg">
+            </a></li>
+            <li class="dzShow"><a href="http://www.ynnanxun.com/phone/raiders/zhaotong"><img class="imgLoad"
+                                                                                             src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                             style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                             data-url="http://shop.ynnanxun.com/mobile/slice/dz_14.jpg">
+            </a></li>
+            <li class="dzShow"><a href="http://www.ynnanxun.com/phone/raiders/yuxi"><img class="imgLoad"
+                                                                                         src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                         style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                         data-url="http://shop.ynnanxun.com/mobile/slice/dz_15.jpg">
+            </a></li>
+            <li class="dzShow"><a href="http://www.ynnanxun.com/phone/raiders/baoshan"><img class="imgLoad"
+                                                                                            src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                            style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                            data-url="http://shop.ynnanxun.com/mobile/slice/dz_16.jpg">
+            </a></li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+    <a href="http://shop.ynnanxun.com/mobile/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjk6IumynOiKsemlvCI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NzMzMjc2NjQ7fQ=="><img
+            class="imgLoad" src="http://shop.ynnanxun.com/mobile/img/px.gif"
+            style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+            data-url="http://shop.ynnanxun.com/mobile/img/goodsAd4.jpg"></a>
+    <a href="http://shop.ynnanxun.com/mobile/search.php?encode=YTozOntzOjQ6InR5cGUiO3M6MTU6IltvYmplY3QgV2luZG93XSI7czo4OiJrZXl3b3JkcyI7czo5OiLoirHppbzojLYiO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDczMzI3NzMzO30="><img
+            class="imgLoad" src="http://shop.ynnanxun.com/mobile/img/px.gif"
+            style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+            data-url="http://shop.ynnanxun.com/mobile/img/goodsAd5.jpg"></a>
+    <div class="goodsListZ">
+        <img class="imgLoad" src="http://shop.ynnanxun.com/mobile/img/px.gif"
+             style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+             data-url="http://shop.ynnanxun.com/mobile/slice/titleZ.jpg">
+        <ul class="i">
+            <li>
+                <a href="http://shop.ynnanxun.com/mobile/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjEyOiLor7rpgpPngavohb8iO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDcyMjgyODcxO30="><img
+                        class="imgLoad" src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                        style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                        data-url="http://shop.ynnanxun.com/mobile/slice/cpfl-s_01.jpg"></a></li>
+            <li>
+                <a href="http://shop.ynnanxun.com/mobile/search.php?encode=YTozOntzOjQ6InR5cGUiO3M6MToiMCI7czo4OiJrZXl3b3JkcyI7czo2OiLojLblj7YiO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDcyMjgzMDM0O30="><img
+                        class="imgLoad" src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                        style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                        data-url="http://shop.ynnanxun.com/mobile/slice/cpfl-s_02.jpg"></a></li>
+            <div class="clear"></div>
+        </ul>
+        <ul class="ii">
+            <li><a href="http://shop.ynnanxun.com/mobile/category.php?id=912"><img class="imgLoad"
+                                                                                   src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                   style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                   data-url="http://shop.ynnanxun.com/mobile/slice/cpfl-x_01.jpg"></a>
+            </li>
+            <li><a href="http://shop.ynnanxun.com/mobile/category.php?id=837"><img class="imgLoad"
+                                                                                   src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                   style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                   data-url="http://shop.ynnanxun.com/mobile/slice/cpfl-x_02.jpg"></a>
+            </li>
+            <li><a href="http://shop.ynnanxun.com/mobile/category.php?id=915"><img class="imgLoad"
+                                                                                   src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                   style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                   data-url="http://shop.ynnanxun.com/mobile/slice/cpfl-x_03.jpg"></a>
+            </li>
+            <li><a href="http://shop.ynnanxun.com/mobile/category.php?id=684"><img class="imgLoad"
+                                                                                   src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                   style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                   data-url="http://shop.ynnanxun.com/mobile/slice/cpfl-x_04.jpg"></a>
+            </li>
+            <li><a href="http://shop.ynnanxun.com/special/rice/index.html"><img class="imgLoad"
+                                                                                src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                data-url="http://shop.ynnanxun.com/mobile/slice/cpfl-x_05.jpg"></a>
+            </li>
+            <li><a href="http://shop.ynnanxun.com/mobile/search.php?keywords=%E9%B2%9C%E8%8A%B1%E9%A5%BC"><img
+                    class="imgLoad" src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                    style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                    data-url="http://shop.ynnanxun.com/mobile/slice/cpfl-x_06.jpg"></a></li>
+            <li>
+                <a href="http://shop.ynnanxun.com/mobile/search.php?encode=YTozOntzOjQ6InR5cGUiO3M6MToiMCI7czo4OiJrZXl3b3JkcyI7czozOiLphZIiO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDcyMjgzNTQyO30="><img
+                        class="imgLoad" src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                        style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                        data-url="http://shop.ynnanxun.com/mobile/slice/cpfl-x_07.jpg"></a></li>
+            <li><a href="http://shop.ynnanxun.com/mobile/category.php?id=733"><img class="imgLoad"
+                                                                                   src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                   style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                   data-url="http://shop.ynnanxun.com/mobile/slice/cpfl-x_08.jpg"></a>
+            </li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+    <div class="goodsListA">
+        <a href="http://shop.ynnanxun.com/mobile/category.php?id=683"><img class="imgLoad"
+                                                                           src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                           style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                           data-url="http://shop.ynnanxun.com/mobile/slice/titleA.jpg"></a>
+        <div class="listAWrap">
+            <div class="listA">
+                <a href="http://shop.ynnanxun.com/mobile/goods.php?id=808"><img class="imgLoad"
+                                                                                src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                data-url="http://shop.ynnanxun.com/mobile/img/goodsA1.jpg"></a>
+            </div>
+            <div class="listA">
+                <a href="http://shop.ynnanxun.com/mobile/goods.php?id=1055"><img class="imgLoad"
+                                                                                 src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                 style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                 data-url="http://shop.ynnanxun.com/mobile/img/goodsA2.jpg"></a>
+                <a href="http://shop.ynnanxun.com/mobile/goods.php?id=1054"><img class="imgLoad"
+                                                                                 src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                 style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                 data-url="http://shop.ynnanxun.com/mobile/img/goodsA3.jpg"></a>
+                <a href="http://shop.ynnanxun.com/mobile/goods.php?id=1056"><img class="imgLoad"
+                                                                                 src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                 style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                 data-url="http://shop.ynnanxun.com/mobile/img/goodsA4.jpg"></a>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <!--第二行s-->
+            <div class="listA">
+                <a href="http://shop.ynnanxun.com/mobile/goods.php?id=807"><img class="imgLoad"
+                                                                                src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                data-url="http://shop.ynnanxun.com/mobile/img/goodsA5.jpg"></a>
+            </div>
+            <div class="listA">
+                <a href="http://shop.ynnanxun.com/mobile/goods.php?id=1044"><img class="imgLoad"
+                                                                                 src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                 style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                 data-url="http://shop.ynnanxun.com/mobile/img/goodsA6.jpg"></a>
+                <a href="http://shop.ynnanxun.com/mobile/goods.php?id=1041"><img class="imgLoad"
+                                                                                 src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                                 style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                                 data-url="http://shop.ynnanxun.com/mobile/img/goodsA7.jpg"></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="huaWen">花纹</div>
+    <div class="goodsListD">
+        <a href="http://shop.ynnanxun.com/mobile/goods.php?id=810"><img class="imgLoad"
+                                                                        src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                        style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                        data-url="http://shop.ynnanxun.com/mobile/img/goodsD1.jpg"></a>
+        <a href="http://shop.ynnanxun.com/mobile/goods.php?id=817"><img class="imgLoad"
+                                                                        src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                        style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                        data-url="http://shop.ynnanxun.com/mobile/img/goodsD2.jpg"></a>
+        <a href="http://shop.ynnanxun.com/mobile/goods.php?id=821"><img class="imgLoad"
+                                                                        src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                        style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                        data-url="http://shop.ynnanxun.com/mobile/img/goodsD3.jpg"></a>
+    </div>
+    <div class="huaWen">花纹</div>
+    <div class="goodsListD">
+        <a href="http://shop.ynnanxun.com/mobile/goods.php?id=655"><img class="imgLoad"
+                                                                        src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                        style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                        data-url="http://shop.ynnanxun.com/mobile/img/goodsE1.jpg"></a>
+        <a href="http://shop.ynnanxun.com/mobile/goods.php?id=656"><img class="imgLoad"
+                                                                        src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                        style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                        data-url="http://shop.ynnanxun.com/mobile/img/goodsE2.jpg"></a>
+        <a href="http://shop.ynnanxun.com/mobile/goods.php?id=660"><img class="imgLoad"
+                                                                        src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                        style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                        data-url="http://shop.ynnanxun.com/mobile/img/goodsE3.jpg"></a>
+    </div>
+    <div class="dizList">
+        <a href="http://www.ynnanxun.com/phone/raiders/"><img class="imgLoad"
+                                                              src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                              style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;border:none;"
+                                                              data-url="http://shop.ynnanxun.com/mobile/slice/dzTitle.jpg"></a>
+
+        <a href="http://www.ynnanxun.com/phone/raiders/dali"><img class="imgLoad"
+                                                                  src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                  style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                  data-url="http://shop.ynnanxun.com/mobile/slice/dzI.jpg"></a>
+        <a href="http://www.ynnanxun.com/phone/raiders/lijiang"><img class="imgLoad"
+                                                                     src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                     style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                     data-url="http://shop.ynnanxun.com/mobile/slice/dzII.jpg"></a>
+        <a href="http://www.ynnanxun.com/phone/raiders/xianggelila"><img class="imgLoad"
+                                                                         src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                         style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                         data-url="http://shop.ynnanxun.com/mobile/slice/dzIII.jpg"></a>
+        <a href="http://www.ynnanxun.com/phone/raiders/jinghong"><img class="imgLoad"
+                                                                      src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                      style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                      data-url="http://shop.ynnanxun.com/mobile/slice/dzIV.jpg"></a>
+        <a href="http://www.ynnanxun.com/phone/raiders/yunnan-20_39"><img class="imgLoad"
+                                                                          src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                          style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                          data-url="http://shop.ynnanxun.com/mobile/slice/dzV.jpg"></a>
+        <a href="http://www.ynnanxun.com/phone/raiders/yunnan-40_20"><img class="imgLoad"
+                                                                          src="http://shop.ynnanxun.com/mobile/img/px.gif"
+                                                                          style="background:url(http://shop.ynnanxun.com/mobile/img/loading.gif) no-repeat center center #FFF;background-size:2rem;"
+                                                                          data-url="http://shop.ynnanxun.com/mobile/slice/dzVI.jpg"></a>
+        <div class="clear"></div>
+    </div>
+    <div class="siteBtm">
+        <div class="imgLink">
+            <a href="http://shop.ynnanxun.com/mobile/"><img src="http://shop.ynnanxun.com/mobile/slice/siteL.jpg"> </a>
+            <a href="tel:4001728899"><img src="http://shop.ynnanxun.com/mobile/slice/siteR.jpg"> </a>
+        </div>
+        <ul>
+            <li><a href="http://shop.ynnanxun.com/mobile/user.php">登录</a></li>
+            <li><a href="http://shop.ynnanxun.com/mobile/register.php">注册</a></li>
+            <li><a href="http://shop.ynnanxun.com/mobile/qcdz/kmcsjc/">机场店</a></li>
+            <li><a href="http://shop.ynnanxun.com/mobile/qcdz/yunlong/">云龙馆</a></li>
+            <div class="clear"></div>
+        </ul>
+        <p>云南南寻科技有限公司</p>
+        <p>地址：云南省昆明市盘龙区穿金路金尚国际B座17楼</p>
+        <p>© 2005-2016 南寻网商城 版权所有，并保留所有权利</p>
+    </div>
+</div>
+</div>
+<!--pageBodyEnd-->
+<!--神圣不可侵犯的底部-->
+<footer>
+    <div class="v_nav">
+        <div class="vf_nav">
+            <ul>
+                <li><a href="http://shop.ynnanxun.com/mobile">
+                    <i class="vf_1"></i>
+                    <span>首页</span></a></li>
+                <li><a href="tel:4001728899">
+                    <i class="vf_2"></i>
+                    <span>客服</span></a></li>
+                <li><a href="http://shop.ynnanxun.com/mobile/catalog.php">
+                    <i class="vf_3"></i>
+                    <span>分类</span></a></li>
+                <li>
+                    <a href="http://shop.ynnanxun.com/mobile/flow.php">
+                        <i class="vf_4"></i>
+                        <span>购物车</span>
+                    </a></li>
+                <li><a href="http://shop.ynnanxun.com/mobile/user.php">
+                    <i class="vf_5"></i>
+                    <span>会员</span></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<!--搜索页-->
+<div id="search_hide" class="search_hide" style="display: block;">
+    <h2><span class="close"><img src="http://shop.ynnanxun.com/mobile/themesmobile/68ecshopcom_mobile/images/close.png"></span>关键搜索
+    </h2>
+    <div id="mallSearch" class="search_mid">
+        <div id="search_tips" style="display:none;"></div>
+
+        <div class="searchdotm">
+            <form class="mallSearch-form" method="get" name="searchForm" id="searchForm"
+                  action="http://shop.ynnanxun.com/mobile/search.php" onsubmit="return checkSearchForm()">
+                <input type="hidden" name="type" id="searchtype" value="[object Window]">
+                <div class="mallSearch-input">
+                    <div class="searchArea">
+                        <input aria-haspopup="true" role="combobox" class="searchPageinput searchValue" name="keywords"
+                               id="keyword" tabindex="9" accesskey="s" onkeyup="STip(this.value, event);"
+                               autocomplete="off" type="text" value="请输入您所搜索的商品"
+                               onfocus="if(this.value=='请输入您所搜索的商品'){this.value='';}else{this.value=this.value;}"
+                               onblur="if(this.value=='')this.value='请输入您所搜索的商品'">
+                    </div>
+                    <input type="submit" value="" class="button searchPageBtn">
+                </div>
+            </form>
+        </div>
+    </div>
+    <section class="mix_recently_search"><h3>热门搜索</h3>
+        <ul>
+            <li>
+                <a href="http://shop.ynnanxun.com/mobile/search.php?keywords=%E9%B2%9C%E8%8A%B1%E9%A5%BC">鲜花饼</a>
+            </li>
+            <li>
+                <a href="http://shop.ynnanxun.com/mobile/search.php?keywords=%E7%B1%B3">米</a>
+            </li>
+            <li>
+                <a href="http://shop.ynnanxun.com/mobile/search.php?keywords=%E7%81%AB%E7%83%A7%E5%B9%B2%E5%B7%B4">火烧干巴</a>
+            </li>
+            <li>
+                <a href="http://shop.ynnanxun.com/mobile/search.php?keywords=%E7%8C%AB%E5%A4%9A%E5%93%A9">猫哆哩</a>
+            </li>
+            <li>
+                <a href="http://shop.ynnanxun.com/mobile/search.php?keywords=%E8%BF%9B%E5%8F%A3%E5%95%86%E5%93%81">进口商品</a>
+            </li>
+            <li>
+                <a href="http://shop.ynnanxun.com/mobile/search.php?keywords=%E7%81%AB%E8%85%BF">火腿</a>
+            </li>
+            <li>
+                <a href="http://shop.ynnanxun.com/mobile/search.php?keywords=%E8%8C%B6%E5%8F%B6">茶叶</a>
+            </li>
+        </ul>
+    </section>
+</div>
+<script>
+    $(".search_hide .close").click(function () {
+        $(".fixedTop,.pageBody,.gotop,footer").fadeIn("slow");
+        $(".search_hide").hide();
+    })
+</script>
+<!--返回顶部菜单-->
+<a href="javascript:goTop();" class="gotop"><img src="http://shop.ynnanxun.com/mobile/slice/topup.png"></a>
+<script>
+    function goTop() {
+        $('html,body').animate({'scrollTop': 0}, 600);
+    }
+</script>
+</body>
+</html>
