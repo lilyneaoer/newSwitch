@@ -63,13 +63,14 @@
     $.each(adData, function (index, obj) {
         if (index == 0) {
             htmlAd = htmlAd + "<li id='tabAutoPlay" + obj.id + "' class='tabAutoPlayChid'><a href='" + obj.link + "' target='_blank'><img title='" + obj.title + "'src='" + obj.src + "'></a></li>";
-            htmlBtn = htmlBtn + "<li class='tabs'><a href='javascript:' class='tab_a tab_on' data-rel='tabAutoPlay" + obj.id + "'>" + obj.title + "</a></li>";
+            htmlBtn = htmlBtn + "<li class='tabs'><a href='"+obj.link+"' title='"+obj.title+"' class='tab_a tab_on' data-rel='tabAutoPlay" + obj.id + "'>" + obj.title + "</a></li>";
         }
         else {
             htmlAd = htmlAd + "<li id='tabAutoPlay" + obj.id + "' class='tabAutoPlayChid' style='display: none;'><a href='" + obj.link + "'target='_blank'><img title='" + obj.title + "'src='" + obj.src + "'></a></li>";
-            htmlBtn = htmlBtn + "<li class='tabs'><a href='javascript:' class='tab_a' data-rel='tabAutoPlay" + obj.id + "'>" + obj.title + "</a></li>";
+            htmlBtn = htmlBtn + "<li class='tabs'><a href='"+obj.link+"' title='"+obj.title+"' class='tab_a' data-rel='tabAutoPlay" + obj.id + "'>" + obj.title + "</a></li>";
         }
     });
+    alert(htmlBtn);
     $("#tab_content").html(htmlAd);
     $("#tab_Auto_Btn").html(htmlBtn);
     // 绑定
