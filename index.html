@@ -70,14 +70,14 @@
             htmlBtn = htmlBtn + "<li class='tabs'><a href='"+obj.link+"' class='tab_a' data-rel='tabAutoPlay" + obj.id + "'>" + obj.title + "</a></li>";
         }
     });
-    //alert(htmlBtn);
     $("#tab_content").html(htmlAd);
     $("#tab_Auto_Btn").html(htmlBtn);
     // 绑定
     $("#tab_Auto_Btn a").powerSwitch({
         classAdd: "tab_on",
         animation: "translate",
-        eventType: "hover",
+        duration:100,
+        eventType: "mouseover",
         autoTime: 4500,
         hoverStop: true,
         container: $("#tab_Auto_Play")
